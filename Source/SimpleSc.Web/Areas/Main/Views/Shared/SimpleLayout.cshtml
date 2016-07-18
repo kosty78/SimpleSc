@@ -1,0 +1,27 @@
+﻿@using System.Web.Optimization
+@using ForexAnalyze.Core.Models.sitecore.templates.ForexAnalyze.Base
+@using Sitecore.Mvc;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@Html.Sitecore().CurrentItem[IBasePageConstants.TitleFieldName]</title>
+    @Styles.Render("~/bundles/css/bootstrap")
+    @Styles.Render("~/bundles/css/custom")
+</head>
+<body>
+<div class="container page">
+    @Html.Sitecore().Placeholder("header")
+    <main>
+        @Html.Sitecore().Placeholder("content")
+    </main>
+    @Html.Sitecore().Placeholder("footer")
+</div>
+
+@Scripts.Render("~/bundles/js/jquery")
+@Scripts.Render("~/bundles/js/bootstrap")
+
+</body>
+</html>
